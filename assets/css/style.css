@@ -518,14 +518,18 @@ section {
 
 
 /*--------------------------------------------------------------
-# Projects
+# Projects and certs
 --------------------------------------------------------------*/
-#projects {
-  background-color: #000000
+#certs {
+  background-color: #000000;
 }
 
-.projects .section-title {
-  color: #000000
+#projects {
+  background-color: #000000;
+}
+
+.projects .section-title h2 {
+  color: #000000;
 }
 
 .projects .image {
