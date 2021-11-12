@@ -528,8 +528,12 @@ section {
   background-color: #000000;
 }
 
+.certs .section-title h2 {
+  color: #ffffff;
+}
+
 .projects .section-title h2 {
-  color: #000000;
+  color: #ffffff;
 }
 
 .projects .image {
