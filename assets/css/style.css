@@ -175,7 +175,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  background: #fff;
+  background: #000000;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
 }
@@ -231,7 +231,7 @@ h1, h2, h3, h4, h5, h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #151515;
+  color: #ffffff;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -278,7 +278,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 15px;
   left: 15px;
   padding: 10px 0;
-  background-color: #fff;
+  background-color: #000000;
   overflow-y: auto;
   transition: 0.3s;
 }
@@ -305,7 +305,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 99;
   opacity: 1;
   visibility: visible;
-  background: #fff;
+  background: #000000;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
 }
 
