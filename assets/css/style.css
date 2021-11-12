@@ -141,7 +141,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar li {
   position: relative;
-  color: #ffffff
+}
+
+.navbar .nav-link li {
+  color: #ffffff;
 }
 
 .navbar a, .navbar a:focus {
