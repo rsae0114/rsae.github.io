@@ -472,7 +472,7 @@ section {
 # About Us
 --------------------------------------------------------------*/
 #about {
-  background-color: #7cc576;
+  background-color: #000000;
 }
 
 .about .image {
@@ -483,6 +483,7 @@ section {
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
+  color: #ffffff
 }
 
 .about .content ul {
