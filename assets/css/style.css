@@ -473,6 +473,8 @@ section {
 --------------------------------------------------------------*/
 .about {
   background-color: #7cc576;
+  background: #7cc576;
+  color: #7cc576;
 }
 
 .about .image {
