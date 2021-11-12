@@ -126,6 +126,11 @@ h1, h2, h3, h4, h5, h6 {
 /**
 * Desktop Navigation 
 */
+
+#navbar {
+  background-color: #000000;
+}
+
 .navbar {
   padding: 0;
 }
