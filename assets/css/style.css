@@ -919,7 +919,7 @@ Button With Effects
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #7cc576;
+  background: #ee0707;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -932,7 +932,7 @@ Button With Effects
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #5ab652;
+  background: #d60000;
   color: #fff;
   text-decoration: none;
 }
