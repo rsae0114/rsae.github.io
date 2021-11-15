@@ -548,11 +548,13 @@ section {
     border: 0;
     padding-bottom: 25px;
     background-color: #000000;
-    color: #ffffff
+    color: #ffffff;
 }
 
 .card-img{
   border-radius: 5% 5% 5% 5%;
+  height: 200px;
+  width: 200px;
 }
 
 /* ----------------------------------------------------
