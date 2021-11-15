@@ -16,7 +16,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #7cc576;
+  color: #ee0707;
 }
 p{
   text-align: justify;
@@ -162,7 +162,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-  color: #7cc576;
+  color: #ee0707;
 }
 
 .navbar .dropdown ul {
@@ -196,7 +196,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
-  color: #7cc576;
+  color: #ee0707;
 }
 
 .navbar .dropdown:hover > ul {
@@ -290,7 +290,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
-  color: #7cc576;
+  color: #ee0707;
 }
 
 .navbar-mobile .getstarted {
@@ -322,7 +322,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
-  color: #7cc576;
+  color: #ee0707;
 }
 
 .navbar-mobile .dropdown > .dropdown-active {
@@ -413,13 +413,13 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 3px;
   margin: 10px;
   color: #fff;
-  background: #cd4631;
+  background: #d60000;
 }
 
 #hero .btn-get-started:hover {
   transition: 0.5s;
   background: #fff;
-  color: #7cc576;
+  color: #d60000;
 }
 
 @media (min-width: 1024px) {
