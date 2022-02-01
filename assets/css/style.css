@@ -597,32 +597,6 @@ Button With Effects
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
-.skills {
-  background: #000000;
-  padding: 15px 0;
-  text-align: center;
-}
-.titol{
-    text-align: center;
-    font-size: 32px;
-    font-weight: bold;
-    text-transform: uppercase;
-    /*margin-bottom: 15px;*/
-    padding-bottom: 0;
-    color: #151515;
-}
-.skills img {
-  width: 30%;
-  filter: grayscale(100);
-  transition: all 0.4s ease-in-out;
-  display: inline-block;
-  /*padding: 10px 0;*/
-}
-
-.skills img:hover {
-  filter: none;
-  transform: scale(1.2);
-}
 
 @media (max-width: 768px) {
   .skills img {
