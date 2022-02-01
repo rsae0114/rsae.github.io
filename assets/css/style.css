@@ -684,7 +684,7 @@ $animationSpeed: 30s;
     width: calc(250px * 14);
   }
 	
-  .col-lg-2 col-md-4 col-6 {
+  .slide {
     height: 100px;
     width: 250px;
   }
