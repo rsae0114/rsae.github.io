@@ -605,11 +605,11 @@ Button With Effects
 .titol{
     text-align: center;
     font-size: 32px;
-    font-weight: bold;
-    text-transform: uppercase;
-    /*margin-bottom: 15px;*/
-    padding-bottom: 0;
-    color: #151515;
+      font-weight: bold;
+      text-transform: uppercase;
+      /*margin-bottom: 15px;*/
+      padding-bottom: 0;
+      color: #151515;
 }
 .skills img {
   width: 30%;
