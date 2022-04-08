@@ -61,5 +61,32 @@ nc <span class="hljs-operator">-l</span> -p <span class="hljs-variable">$LPORT</
 <p class="has-line-data" data-line-start="17" data-line-end="18">Atacante:</p>
 <pre><code class="has-line-data" data-line-start="19" data-line-end="21" class="language-sh">nc &lt;victim_ip&gt; <span class="hljs-number">8888</span>
 </code></pre>
+<h4 class="code-line" data-line-start=89 data-line-end=90 ><a id="Fping_a_una_red_89"></a>Fping a una red</h4>
+<p class="has-line-data" data-line-start="91" data-line-end="92">Mediante el siguiente comando se pueden obtener rápidamente todos los hosts activos dentro de una red:</p>
+<pre><code class="has-line-data" data-line-start="94" data-line-end="96" class="language-sh">fping <span class="hljs-operator">-a</span> -g &lt;<span class="hljs-number">1.2</span>.<span class="hljs-number">3.4</span>/<span class="hljs-number">24</span>&gt; <span class="hljs-number">2</span>&gt;/dev/null 
+</code></pre>
+<p class="has-line-data" data-line-start="97" data-line-end="98">Se puede obtener el mismo resultado con Nmap</p>
+<pre><code class="has-line-data" data-line-start="100" data-line-end="102" class="language-sh">nmap -sn &lt;<span class="hljs-number">1.2</span>.<span class="hljs-number">3.4</span>/<span class="hljs-number">24</span>&gt;
+</code></pre>
+<h4 class="code-line" data-line-start=103 data-line-end=104 ><a id="Nmap_103"></a>Nmap</h4>
+<p class="has-line-data" data-line-start="104" data-line-end="105">Escaneo rápido que muestra las versiones:</p>
+<pre><code class="has-line-data" data-line-start="106" data-line-end="108" class="language-sh">nmap <span class="hljs-operator">-s</span>C <span class="hljs-operator">-s</span>V &lt;<span class="hljs-number">1.2</span>.<span class="hljs-number">3.4</span>/<span class="hljs-number">24</span>&gt;
+</code></pre>
+<p class="has-line-data" data-line-start="109" data-line-end="110">Solo puertos:</p>
+<pre><code class="has-line-data" data-line-start="112" data-line-end="114" class="language-sh">nmap -p- &lt;<span class="hljs-number">1.2</span>.<span class="hljs-number">3.4</span>/<span class="hljs-number">24</span>&gt;
+</code></pre>
+<p class="has-line-data" data-line-start="115" data-line-end="116">Detectar el sistema operativo sin hacer ping:</p>
+<pre><code class="has-line-data" data-line-start="117" data-line-end="119" class="language-sh">nmap -Pn -O &lt;<span class="hljs-number">1.2</span>.<span class="hljs-number">3.4</span>/<span class="hljs-number">24</span>&gt;
+</code></pre>
+<p class="has-line-data" data-line-start="120" data-line-end="121">Escaneo UDP:</p>
+<pre><code class="has-line-data" data-line-start="122" data-line-end="124" class="language-sh">nmap <span class="hljs-operator">-s</span>U -v &lt;<span class="hljs-number">1.2</span>.<span class="hljs-number">3.4</span>/<span class="hljs-number">24</span>&gt;
+</code></pre>
+<h4 class="code-line" data-line-start=125 data-line-end=126 ><a id="Links_de_inters_125"></a>Links de interés</h4>
+<p class="has-line-data" data-line-start="127" data-line-end="133"><a href="https://www.revshells.com/">https://www.revshells.com/</a><br>
+<a href="https://www.virustotal.com/gui/home/upload">https://www.virustotal.com/gui/home/upload</a><br>
+<a href="https://dnsdumpster.com/">https://dnsdumpster.com/</a><br>
+<a href="https://temp-mail.org/es/">https://temp-mail.org/es/</a><br>
+<a href="https://crt.sh/">https://crt.sh/</a><br>
+<a href="https://dillinger.io/">https://dillinger.io/</a></p>
 <p></p>
 </body>
