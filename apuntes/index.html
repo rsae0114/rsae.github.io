@@ -4,12 +4,38 @@ und-color:#D3DAEA;height:2px;transition:all .3s;width:20px}.open-menu .toggle sp
 <p class="has-line-data" data-line-start="3" data-line-end="4"><a href="https://rsae0114.github.io/"><img src="../assets/img/rsae-name.png" alt="rsae"></a></p>
 <h1 class="code-line" data-line-start=0 data-line-end=1><a id="Apuntes_0"></a><strong>Contenido</strong></h1>
 <ul>
+<a href="#"><li>Enumeración</li></a>
 <a href="#"><li>Web</li></a>
 <a href="#"><li>Wifi</li></a>
 <a href="#"><li>Windows</li></a>
 <a href="#"><li>Servicios</li></a>
 <a href="#"><li>Otros</li></a>
 </ul>
+<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Enumeracin_0"></a>Enumeración</h1>
+<h4 class="code-line" data-line-start=89 data-line-end=90 ><a id="Fping_a_una_red_89"></a>Fping a una red</h4>
+<p class="has-line-data" data-line-start="91" data-line-end="92">Mediante el siguiente comando se pueden obtener rápidamente todos los hosts activos dentro de una red:</p>
+<pre><code class="has-line-data" data-line-start="94" data-line-end="96" class="language-sh">fping <span class="hljs-operator">-a</span> -g &lt;<span class="hljs-number">1.2</span>.<span class="hljs-number">3.4</span>/<span class="hljs-number">24</span>&gt; <span class="hljs-number">2</span>&gt;/dev/null 
+</code></pre>
+<p class="has-line-data" data-line-start="97" data-line-end="98">Se puede obtener el mismo resultado con Nmap</p>
+<pre><code class="has-line-data" data-line-start="100" data-line-end="102" class="language-sh">nmap -sn &lt;<span class="hljs-number">1.2</span>.<span class="hljs-number">3.4</span>/<span class="hljs-number">24</span>&gt;
+</code></pre>
+<h4 class="code-line" data-line-start=103 data-line-end=104 ><a id="Nmap_103"></a>Nmap</h4>
+<p class="has-line-data" data-line-start="105" data-line-end="106">Escaneo rápido que muestra las versiones:</p>
+<pre><code class="has-line-data" data-line-start="108" data-line-end="110" class="language-sh">nmap <span class="hljs-operator">-s</span>C <span class="hljs-operator">-s</span>V &lt;host&gt;
+</code></pre>
+<p class="has-line-data" data-line-start="28" data-line-end="29">Escaneo con script de vulnerabilidades:</p>
+<pre><code class="has-line-data" data-line-start="30" data-line-end="32" class="language-sh">nmap <span class="hljs-operator">-s</span>C <span class="hljs-operator">-s</span>V --script vuln &lt;host&gt;
+</code></pre>
+<p class="has-line-data" data-line-start="111" data-line-end="112">Escaneo agresivo solo de puertos:</p>
+<pre><code class="has-line-data" data-line-start="114" data-line-end="116" class="language-sh">nmap -p- --min-rate 5000 -T5 &lt;host&gt;
+</code></pre>
+<p class="has-line-data" data-line-start="117" data-line-end="118">Detectar el sistema operativo sin hacer ping:</p>
+<pre><code class="has-line-data" data-line-start="120" data-line-end="122" class="language-sh">nmap -Pn -O &lt;host&gt;
+</code></pre>
+<p class="has-line-data" data-line-start="123" data-line-end="124">Escaneo UDP:</p>
+<pre><code class="has-line-data" data-line-start="126" data-line-end="128" class="language-sh">nmap <span class="hljs-operator">-s</span>U -T5 -v &lt;host&gt;
+</code></pre>
+    
 <h1 class="code-line" data-line-start=0 data-line-end=1><a id="Apuntes_0"></a><strong>Web</strong></h1>
 <h4 class="code-line" data-line-start=125 data-line-end=126 ><a id="Netcat_125"></a>Netcat</h4>
 <p class="has-line-data" data-line-start="126" data-line-end="127">Enumeración con Netcat</p>
@@ -70,29 +96,7 @@ nc <span class="hljs-operator">-l</span> -p <span class="hljs-variable">$LPORT</
 <p class="has-line-data" data-line-start="17" data-line-end="18">Atacante:</p>
 <pre><code class="has-line-data" data-line-start="19" data-line-end="21" class="language-sh">nc &lt;victim_ip&gt; <span class="hljs-number">8888</span>
 </code></pre>
-<h4 class="code-line" data-line-start=89 data-line-end=90 ><a id="Fping_a_una_red_89"></a>Fping a una red</h4>
-<p class="has-line-data" data-line-start="91" data-line-end="92">Mediante el siguiente comando se pueden obtener rápidamente todos los hosts activos dentro de una red:</p>
-<pre><code class="has-line-data" data-line-start="94" data-line-end="96" class="language-sh">fping <span class="hljs-operator">-a</span> -g &lt;<span class="hljs-number">1.2</span>.<span class="hljs-number">3.4</span>/<span class="hljs-number">24</span>&gt; <span class="hljs-number">2</span>&gt;/dev/null 
-</code></pre>
-<p class="has-line-data" data-line-start="97" data-line-end="98">Se puede obtener el mismo resultado con Nmap</p>
-<pre><code class="has-line-data" data-line-start="100" data-line-end="102" class="language-sh">nmap -sn &lt;<span class="hljs-number">1.2</span>.<span class="hljs-number">3.4</span>/<span class="hljs-number">24</span>&gt;
-</code></pre>
-<h4 class="code-line" data-line-start=103 data-line-end=104 ><a id="Nmap_103"></a>Nmap</h4>
-<p class="has-line-data" data-line-start="105" data-line-end="106">Escaneo rápido que muestra las versiones:</p>
-<pre><code class="has-line-data" data-line-start="108" data-line-end="110" class="language-sh">nmap <span class="hljs-operator">-s</span>C <span class="hljs-operator">-s</span>V -A &lt;host&gt;
-</code></pre>
-<p class="has-line-data" data-line-start="28" data-line-end="29">Escaneo con script de vulnerabilidades:</p>
-<pre><code class="has-line-data" data-line-start="30" data-line-end="32" class="language-sh">nmap <span class="hljs-operator">-s</span>C <span class="hljs-operator">-s</span>V --script vuln &lt;host&gt;
-</code></pre>
-<p class="has-line-data" data-line-start="111" data-line-end="112">Escaneo agresivo solo de puertos:</p>
-<pre><code class="has-line-data" data-line-start="114" data-line-end="116" class="language-sh">nmap -p- --min-rate 5000 -T5 &lt;host&gt;
-</code></pre>
-<p class="has-line-data" data-line-start="117" data-line-end="118">Detectar el sistema operativo sin hacer ping:</p>
-<pre><code class="has-line-data" data-line-start="120" data-line-end="122" class="language-sh">nmap -Pn -O &lt;host&gt;
-</code></pre>
-<p class="has-line-data" data-line-start="123" data-line-end="124">Escaneo UDP:</p>
-<pre><code class="has-line-data" data-line-start="126" data-line-end="128" class="language-sh">nmap <span class="hljs-operator">-s</span>U -T5 -v &lt;host&gt;
-</code></pre>
+
 <h4 class="code-line" data-line-start=129 data-line-end=130 ><a id="SNMP_129"></a>SNMP</h4>
 <p class="has-line-data" data-line-start="130" data-line-end="131"><strong>El puerto 161 puede dar mucha información sobre el sistema víctima</strong></p>
 <p class="has-line-data" data-line-start="132" data-line-end="133">Obtener community strings por fuerza bruta:</p>
