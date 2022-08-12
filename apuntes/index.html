@@ -111,40 +111,6 @@ OPTIONS / HTTP/<span class="hljs-number">1.0</span>
 <p class="has-line-data" data-line-start="39" data-line-end="40">Obtener credenciales por fuerza bruta:</p>
 <pre><code class="has-line-data" data-line-start="41" data-line-end="43" class="language-sh">hydra <span class="hljs-operator">-l</span> &lt;user&gt; -P &lt;wordlist&gt; &lt;host&gt; ftp
 </code></pre>
-
-
-<h4 class="code-line" data-line-start=0 data-line-end=1 ><a id="SMB_0"></a>SMB</h4>
-<p class="has-line-data" data-line-start="1" data-line-end="2">Mostrar el nivel de seguridad de SMB:</p>
-<pre><code class="has-line-data" data-line-start="3" data-line-end="5" class="language-sh">nmap -p445 --script smb-security-mode &lt;host&gt;
-</code></pre>
-<p class="has-line-data" data-line-start="5" data-line-end="6">Enumerar los usuarios conectados a un sistema:</p>
-<pre><code class="has-line-data" data-line-start="7" data-line-end="9" class="language-sh">nmap -p445 --script smb-enum-sessions &lt;host&gt;
-</code></pre>
-<p class="has-line-data" data-line-start="9" data-line-end="10">Enumerar recursos compartidos:</p>
-<pre><code class="has-line-data" data-line-start="11" data-line-end="13" class="language-sh">nmap -p445 --script smb-enum-shares &lt;host&gt;
-</code></pre>
-<p class="has-line-data" data-line-start="13" data-line-end="14">Obtener una lista de grupos del sistema:</p>
-<pre><code class="has-line-data" data-line-start="15" data-line-end="17" class="language-sh">nmap -p445 --script smb-enum-groups &lt;host&gt;
-</code></pre>
-<p class="has-line-data" data-line-start="17" data-line-end="18">Mostrar información sobre los archivos compartidos en SMB:</p>
-<pre><code class="has-line-data" data-line-start="19" data-line-end="21" class="language-sh">nmap -p445 --script smb-ls &lt;host&gt;
-</code></pre>
-<p class="has-line-data" data-line-start="21" data-line-end="22">Conectarse a SMB con un usuario <strong>guest</strong></p>
-<pre><code class="has-line-data" data-line-start="23" data-line-end="25" class="language-sh">smbmap -u guest -p <span class="hljs-string">""</span> <span class="hljs-operator">-d</span> . -H &lt;host&gt;
-</code></pre>
-<p class="has-line-data" data-line-start="25" data-line-end="26">Obtener información del sistema operativo:</p>
-<pre><code class="has-line-data" data-line-start="27" data-line-end="29" class="language-sh">enum4linux -o &lt;host&gt;
-</code></pre>
-<p class="has-line-data" data-line-start="29" data-line-end="30">Obtener una lista de usuarios:</p>
-<pre><code class="has-line-data" data-line-start="31" data-line-end="33" class="language-sh">enum4linux -U &lt;host&gt;
-</code></pre>
-<p class="has-line-data" data-line-start="33" data-line-end="34">Obtener credenciales por fuerza bruta:</p>
-<pre><code class="has-line-data" data-line-start="35" data-line-end="37" class="language-sh">hydra <span class="hljs-operator">-l</span> &lt;user&gt; -P &lt;wordlist&gt; &lt;host&gt; smb
-</code></pre>
-<h4 class="code-line" data-line-start=38 data-line-end=39 ><a id="FTP_38"></a>FTP</h4>
-<p class="has-line-data" data-line-start="39" data-line-end="40">Obtener credenciales por fuerza bruta:</p>
-<pre><code class="has-line-data" data-line-start="41" data-line-end="43" class="language-sh">hydra <span class="hljs-operator">-l</span> &lt;user&gt; -P &lt;wordlist&gt; &lt;host&gt; ftp
-</code></pre>
 <h4 class="code-line" data-line-start=44 data-line-end=45 ><a id="SSH_44"></a>SSH</h4>
 <p class="has-line-data" data-line-start="45" data-line-end="46">Mostrar versión de SSH:</p>
 <pre><code class="has-line-data" data-line-start="47" data-line-end="49" class="language-sh">nc &lt;host&gt; <span class="hljs-number">22</span>
