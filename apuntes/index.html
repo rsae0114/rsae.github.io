@@ -165,6 +165,12 @@ EOF
 </code></pre>
 <p class="has-line-data" data-line-start="22" data-line-end="23">Mediante esta url se pueden ejecutar los comandos desde un navegador: <code>http://&lt;ip&gt;/script.php?cmd=&lt;command&gt;</code></p>
 <p></p>
+<h4 class="code-line" data-line-start=0 data-line-end=1 ><a id="Obtener_shell_0"></a>Obtener shell</h4>
+<pre><code class="has-line-data" data-line-start="2" data-line-end="4" class="language-sh">script -c /bin/bash /dev/null
+</code></pre>
+<pre><code class="has-line-data" data-line-start="6" data-line-end="8" class="language-sh">python -c <span class="hljs-string">'import pty; pty.spawn("/bin/sh")'</span>
+</code></pre>
+<p></p>
 <h4 class="code-line" data-line-start=133 data-line-end=134 ><a id="Links_de_inters_133"></a>Links de interés</h4>
 <h5 class="code-line" data-line-start=1 data-line-end=2 ><a id="Comandos_1"></a>Comandos</h5>
 <p class="has-line-data" data-line-start="2" data-line-end="4"><a href="https://www.revshells.com/">RevShells</a><br>
