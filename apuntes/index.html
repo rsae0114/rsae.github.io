@@ -16,9 +16,13 @@ und-color:#D3DAEA;height:2px;transition:all .3s;width:20px}.open-menu .toggle sp
 <p class="has-line-data" data-line-start="91" data-line-end="92">Mediante el siguiente comando se pueden obtener rápidamente todos los hosts activos dentro de una red:</p>
 <pre><code class="has-line-data" data-line-start="94" data-line-end="96" class="language-sh">fping <span class="hljs-operator">-a</span> -g &lt;<span class="hljs-number">1.2</span>.<span class="hljs-number">3.4</span>/<span class="hljs-number">24</span>&gt; <span class="hljs-number">2</span>&gt;/dev/null 
 </code></pre>
-<p class="has-line-data" data-line-start="97" data-line-end="98">Se puede obtener el mismo resultado con Nmap</p>
+<p class="has-line-data" data-line-start="97" data-line-end="98">Se puede obtener el mismo resultado con Nmap:</p>
 <pre><code class="has-line-data" data-line-start="100" data-line-end="102" class="language-sh">nmap -sn &lt;<span class="hljs-number">1.2</span>.<span class="hljs-number">3.4</span>/<span class="hljs-number">24</span>&gt;
 </code></pre>
+<p class="has-line-data" data-line-start="0" data-line-end="1">También se puede hacer con la herramienta Netdiscover</p>
+<pre><code class="has-line-data" data-line-start="2" data-line-end="4" class="language-sh">netdiscover
+</code></pre>
+
 <h4 class="code-line" data-line-start=103 data-line-end=104 ><a id="Nmap_103"></a>Nmap</h4>
 <p class="has-line-data" data-line-start="105" data-line-end="106">Escaneo rápido que muestra las versiones:</p>
 <pre><code class="has-line-data" data-line-start="108" data-line-end="110" class="language-sh">nmap <span class="hljs-operator">-s</span>C <span class="hljs-operator">-s</span>V &lt;host&gt;
@@ -184,5 +188,13 @@ EOF
 <a href="https://toolbox.googleapps.com/apps/main/">https://toolbox.googleapps.com/apps/main/</a></br>
 <a href="https://lampyre.io/">https://lampyre.io/</a></br>
 <a href="https://www.yandex.com/images/">https://www.yandex.com/images/</a></p>
+<h5 class="code-line" data-line-start=0 data-line-end=1 ><a id="Scripts_0"></a>Scripts</h5>
+<p class="has-line-data" data-line-start="1" data-line-end="4"><a href="https://github.com/swisskyrepo/PayloadsAllTheThings">https://github.com/swisskyrepo/PayloadsAllTheThings</a><br>
+<a href="https://github.com/blendin/3snake">https://github.com/blendin/3snake</a><br>
+<a href="https://gist.github.com/mrpapercut/9e4f511e74fdf3796d0abcc4de182b65">https://gist.github.com/mrpapercut/9e4f511e74fdf3796d0abcc4de182b65</a></p>
+<h5 class="code-line" data-line-start=5 data-line-end=6 ><a id="Privilege_escalation_5"></a>Privilege escalation</h5>
+<p class="has-line-data" data-line-start="6" data-line-end="9"><a href="https://gtfobins.github.io/gtfobins/nmap/">https://gtfobins.github.io/gtfobins/nmap/</a><br>
+<a href="https://github.com/sleventyeleven/linuxprivchecker">https://github.com/sleventyeleven/linuxprivchecker</a><br>
+<a href="https://github.com/rebootuser/LinEnum">https://github.com/rebootuser/LinEnum</a></p>
 <p></p>
 </body>
